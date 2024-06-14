@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+}
+.bgColor-header{
+    background-color: rgb(97, 97, 97);
+    .barra-login {
+        padding: 1rem 2rem 1rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 1500px;
+        margin: auto;
+        .link-login {
+            display: flex;
+            align-items: center;
+            .link-header{
+                color: white;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+                &:first-child{
+                    margin-right: 1%;
+                }
+                &:last-child{
+                    margin-left: 1%;
+                }
+            }
+            .barra{
+                color: white;
+            }
+        }
+        .login-header{
+            display: flex;
+            align-items: center;
+            justify-self: end;
+            color: white;
+            gap: 0.5rem;
+            .omino{
+                background-color: red;
+                padding: 0.2rem 0.3rem 0.2rem 0.3rem;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+.container-Nav{
+    padding: 0 2rem 0 2rem;
+    .boxNav{
+        display: grid;
+        grid-template-columns: 0fr 2fr;
+        max-width: 1500px;
+        margin: auto;
+        padding: 1rem 0 1rem 0;
+        .logo-box{
+            display: flex;
+            align-items: center;
+            .logo{
+                height: 2rem;
+            }
+        }
+        .hamburger{
+            display: none;
+            height: 2.4rem;
+            width: 3rem;
+            border: 3px solid rgba(97, 97, 97, 0.774);
+            border-radius: 5px;
+            .fetta{
+                font-size: 2rem;
+                color: rgba(97, 97, 97, 0.747);
+            }
+        }
+
+        
+
+
+        .opzioni-nav{
+            display: grid;
+            justify-content: end;
+            grid-template-columns: 8.2rem 8.2rem 10rem 8.2rem ;
+
+            .home, .ordini, .consegne{
+                border-right: 3px solid rgba(83, 81, 81, 0.39);
+            }
+
+            .box-nav{
+                //outline: 1px solid black;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.6rem;
+                i{
+                    font-size: 1.4rem;                        
+                    color: rgba(83, 81, 81, 0.719);
+                }
+                &:hover i, &:hover .testo-opzioni{
+                    color: red;
+                }
+                .testo-opzioni{
+                    font-weight: bolder;
+                    font-family: math;
+                    color: rgb(75, 74, 74)
+
+                } 
+            }
+
+        }
+        è
+    }
+}
+
+.containerOrdini{
+    display: g
+}
+
+
+/*creare un div con un id che possa essere richiamatato tramite 
+il tag link */
+
+@media only screen and (max-width: 768px)  {
+    .boxNav{
+        display: flex !important;
+        /* background-color: aqua; */
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        .logo-box{
+            width: 100%;
+        }
+    }
+    .opzioni-nav{
+        grid-template-columns: 7.2rem 7.2rem 9rem 7.2rem !important;
+    }
+    .hamburger{
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 576px)  {
+
+    .bgColor-header{
+        grid-template-columns: 2fr 1fr;
+        .barra-login{
+            grid-template-columns: 2fr 1fr !important;
+        }
+        .login-header{
+            .txt-login {
+                display: none;
+            }
+            .frecciaLogin{
+                display: none;
+            }
+        }
+    }
+
+    .boxNav{
+        flex-direction: row;
+        justify-content: space-between;
+        .hamburger{
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .opzioni-nav{
+        display: none !important;
+    }
+
+    .hamburger{
+        display: block !important;
+    } 
+}
+
+
